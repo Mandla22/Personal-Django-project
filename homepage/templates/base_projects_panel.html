@@ -1,0 +1,33 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+    <title>Projects</title>
+{% endblock title %}
+
+{% block body %}
+    <div class="page-wrap">
+        <div id="main" class="container">
+            {% block panel %}
+                <div class="projects-panel">
+                    <div class="panel-header">
+                        {% block panelHeader %} {% endblock panelHeader %} <!-- <h3>Zombie Apocalypse</h3> -->
+                        {% block headerSub %} {% endblock headerSub %}
+                        <!-- <p class="panel-header-sub"><span class="span">Type: </span>Game</p> -->
+                    </div>
+                    <div class="screenshot">
+                        {% block image %} {% endblock image %}
+                        {% comment %} <!-- <img src="{% static 'images/zombies.jpg' %}" alt="Screen shot"> --> {% endcomment %}
+                    </div>
+                    {% block download %} {% endblock download %}
+                    <!-- <a class="span" href="#">Download source folder</a><br> -->
+                    <p class="inline span">Description: </p>
+                    {% block description %}{% endblock description %}
+                    <!-- <p class="description"></p> -->
+                </div>
+            {% endblock panel %}
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
+

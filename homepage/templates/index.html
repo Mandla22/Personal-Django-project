@@ -1,0 +1,27 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+    <title>Code Dumpster</title>
+{% endblock %}
+
+{% block body %}
+    <div class="page-wrap">
+        <div id="main" class="container clear-top">
+            <div class="row">
+                <div class="col">
+                    <div class="heading">
+                        <h1 id="top-heading"> Welcome to my mini projects dump site </h1>
+                    </div>
+                    <p class="paragraphs index-paragraph-align">
+                        This is where I generally dump my <i>"profile building projects"</i>. Most of the programs I
+                        built are written in Java and C++. I felt these
+                        <a href="{% url 'homepage:projects' %}">projects</a> weren't really GitHub material so
+                        I decided to just dump them here on my site. <br><br>
+                        This is website is written using Python's Django framework, which is really awesome.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

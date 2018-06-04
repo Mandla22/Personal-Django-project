@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    {% block title %}
+    {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {% load staticfiles %}
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_custom_css.css' %}" rel="stylesheet">
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function () {
+            var url = window.location;
+            $('ul.nav a').filter(function () {
+                return this.href == url;
+            }).parent().addClass('active').parent().parent().addClass('active');
+        });
+    </script>
+</head>
+{% endblock head %}
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#NavBar" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'homepage:index' %}"> Code Dumpster</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="NavBar">
+                <ul class="nav navbar-nav" >
+                    <li>
+                        <a href="{% url 'homepage:index' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'homepage:projects' %}">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'homepage:about' %}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+    {% block footer %}
+    <div class="myfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 footer-panel">
+                    <h4><strong>Contact Details</strong></h4>
+                    <div class="row-md">
+                        <div class="col-sm">
+                            <p class="myfooter-text-color"><a>mandlamasombuka21@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="row-md">
+                        <div class="col-sm">
+                            <p class="myfooter-text-color">(+27)61 785 9409</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 footer-panel">
+                    <h4><strong>Social</strong></h4>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <ul class="list-inline links">
+                                <li>
+                                    <a href="https://facebook.com/mandla.masombuka.35" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/__mandla__/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/in/mandla-masombuka-940065148" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock footer%}
+</body>
+</html>

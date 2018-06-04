@@ -1,0 +1,238 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+    <title>Projects</title>
+{% endblock title %}
+
+{% block body %}
+    {% load static %}
+    <style> body{ background: linear-gradient(black, white);} </style>
+    <div class="page-wrap">
+        <div id="main" class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Zombie Apocalypse</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Game</p>
+                        </div>
+                        <div id="re" class="screenshot">
+                            <a href="#">
+                                <img src="{% static 'images/zombies.jpg' %}" alt="Screen shot">
+                            </a>
+                        </div>
+
+                        {% for object in src_objects|slice:"0:1" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"0:1" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            This is one of the games i've managed to complete, though not perfect, it's my favourite!
+                            I wrote it in the first semester of Java programming. I ended up not submitting because it
+                            took forever to complete :-(
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Multiplayer Tanks</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Multiplayer game</p>
+                        </div>
+                        <div class="screenshot">
+                            <img src="{% static 'images/tanks.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"6:7" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"6:7" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            This one was written in the second semester of Java programming. It's a
+                            multiplayer and I'm really proud to have pulled something like this. But i know
+                            it's going to be very slow playing over a network since I used TCP and not UDP plus
+                            it's Java.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Pong</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Game</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/pong.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"3:4" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"3:4" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description:</p>
+                        <p class="description">
+                            My first love. The first and last C++ game I've written. Definitely one of the worst
+                            spaghetti code ever written. Do not try to understand what I was doing, you'll hurt your
+                            brain. In my defence, it was the first year I started writing code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Hangman</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Console game</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/hangman.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"2:3" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"2:3" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            This one over here is a product of boredom. So one day I was seating, bored, I decided
+                            to try to write a Python console game within an hour and voila hangman!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>NSFAS Accommodations finder</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Software</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/accommodations.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"1:2" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"1:2" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            This is one software I've made which is quite helpful to other people, well not yet cause
+                            it has been on my laptop the whole time. It helps with directions to UJ's NSFAS
+                            accredited student accommodations. Plus it can be used to find the closest accommodations
+                            to any of the UJ's campuses. Written with Java of course with some custom Tree and Array
+                            list data structures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Online shop</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Software</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/onlineShop.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"5:6" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"5:6" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            Another client-server program. I wrote this one for a friend. It implements a simple
+                            first-come first-served algorithm for placing order. the algorithm is implemented using
+                            a Queue data structure. <b>Disclaimer: </b> The prices here are made up.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>Rename project</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Console software</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/rename.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"4:5" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"4:5" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            I have always wanted to create an application to help me rename the files for TV series'
+                            after I downloaded them. With this software you basically give it the format in which you
+                            want the series' files to be renamed and it will rename all of them.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="projects-panel">
+                        <div class="panel-header">
+                            <h3>YouCalculus</h3>
+                            <p class="panel-header-sub"><span class="span">Type: </span>Software</p>
+                        </div>
+                        <div class="screenshot">
+                             <img src="{% static 'images/youcalculus.jpg' %}" alt="Screen shot">
+                        </div>
+
+                        {% for object in src_objects|slice:"7:" %}
+                            <a class="span" href="{{object.location}}">Download source folder ({{object.size}} KB)</a> or
+                        {% endfor %}
+                        {% for object in binary_objects|slice:"7:" %}
+                            <a class="span" href="{{object.location}}">compiled exe file ({{object.size}} MB)</a><br>
+                        {% endfor %}
+
+                        <p class="inline span">Description: </p>
+                        <p class="description">
+                            Here, is a YouTube wannabe application I created when I was introducing myself to Graph
+                            data structure. This application is for tutoring calculus using videos from YouTube. It's
+                            not yet done though. The main use of the graph (undirected) in this application is to
+                            show the related videos of the currently watched video. This application has great potential
+                            for being a good resource for studying, unlike looking for the videos directly on YouTube
+                            which will show up the video you want along with some random video with irresistible title.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
+

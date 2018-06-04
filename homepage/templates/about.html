@@ -1,0 +1,43 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+    <title>About</title>
+{% endblock %}
+
+{% block body %}
+     <style> body{ background: linear-gradient(black, white);} </style>
+     <div class="page-wrap">
+         <div id="main" class="container clear-top">
+            <div id="center" class="center-about-head">
+                <div class="about-head">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            {% load static %}
+                            <img src="{% static 'images/profile.jpg' %}" alt="Profile">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <h2 class="profile-heading">Mandla Masombuka</h2>
+                            <h3 class="profile-sub-heading">Software Developer</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="align-about-paragraph">
+                 <div class="paragraphs">
+                     <p>
+                         I'm a software developer from Siyabuswa, a small place in Mpumalanga province. I currently
+                         reside in Johannesburg. That's it... don't know what to say now.<br><br>
+                         Oh I almost forgot, I really love programming and I basically made this website just
+                         to introduce myself in the web development theme. I plan to venture more in web dev, maybe
+                         pick up more of Javascript's front-end libraries like React.js then move on to Android
+                         development.
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </div>
+{% endblock %}
+
+
+
+

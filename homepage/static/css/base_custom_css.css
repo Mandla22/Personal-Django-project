@@ -1,0 +1,228 @@
+
+html,body{
+    height: 100%;
+    /*background-color: rgb(160,180,165);*/
+    background: linear-gradient(white, gray);
+}
+
+.page-wrap{
+    font-family: "Times New Roman", Times;
+    min-height: 100%
+}
+
+#main{
+    padding-bottom: 150px;
+}
+
+.paragraphs{
+    font-size: 21px;
+}
+
+.index-paragraph-align{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.myfooter{
+    height: 150px;
+    position: relative;
+    margin-top: -150px;
+    clear: both;
+    padding-top: 20px;
+    background: black;
+}
+
+@media (max-width: 991px){
+    .myfooter{
+        height: 300px;
+    }
+}
+
+.myfooter-text-color{
+    color: #343a40;
+    font-family: serif;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.myfooter h4{
+    font-family: 'Saira Extra Condensed', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:  rgb(200,200,200);
+}
+
+@media (max-width: 991px){
+    .footer-panel{
+        background: rgb(10,10,10);
+        width: auto;
+        height: auto;
+        padding: 5px;
+        margin-bottom : 15px;
+        margin-top: 10px;
+        border: inset;
+    }
+}
+
+.footer-panel li{
+    border-radius: 100%;
+    margin-right: 20px;
+    margin-left: 10px;
+    border: solid;
+}
+
+.heading{
+    margin-left: 21%;
+    margin-right: 20%;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991px){
+    .heading{
+        margin: 0 0 40px 0;
+    }
+}
+
+h1#top-heading{
+    font-size: 34px;
+    font-family: "Times New Roman",serif;
+    color: black;
+    margin-left: 5%;
+}
+
+.fa{
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 24px;
+}
+
+.nav a{
+    font-size: 16px;
+}
+
+.navbar-header a{
+    font-size: 21px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    background-color: rgb(160,180,165);
+}
+
+/*--------------- about page css -----------------------*/
+.center-about-head{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    height: 100%;
+}
+
+.align-about-paragraph{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+@media (max-width: 355px){
+    .align-about-paragraph{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.about-head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(200,205,205);
+}
+
+@media (max-width: 991px){
+    .about-head{
+        justify-content: center;
+    }
+
+    .about-head img{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-heading{
+        line-height: 18px;
+    }
+}
+
+.about-head img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+.profile-heading{
+    font-size: 2.6rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-sub-heading{
+    font-size: 21px;
+    font-weight: bold;
+    color: #878787;
+    text-align: center;
+    margin-top: 0;
+}
+
+/*--------------- projects page css -----------------------*/
+
+.projects-panel{
+    /*width: 50%;*/
+    height: auto;
+    border: solid;
+    background: white;
+    margin-bottom: 5%;
+}
+
+.panel-header h3{
+    font-style: oblique;
+    font-weight: bold;
+    margin-bottom: 0px;
+
+}
+
+.panel-header{
+    margin-left: 5%;
+}
+
+.panel-header-sub{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.span{
+    font-style: normal;
+    font-weight: bold;
+}
+
+.screenshot img{
+    /*padding: 10px 0px 10px 15px;*/
+    margin-left: 15%;
+    width: 60%;
+}
+
+.screenshot{
+    margin-bottom: 5%;
+}
+
+.inline{
+    display: inline;
+    margin-right: 1%;
+}
+
+.description{
+    display: inline;
+}
